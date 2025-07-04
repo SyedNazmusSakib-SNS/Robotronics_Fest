@@ -1,0 +1,60 @@
+import type { Organizer } from "@/types"
+
+export const organizers: Organizer[] = [
+  {
+    name: "Dr. Sejuti Rahman",
+    designation: "Chairperson",
+    role: "Head of Organization",
+    phone: "+880-1234-567890",
+    image: "/placeholder.svg?height=200&width=200",
+    tier: "head",
+  },
+  {
+    name: "Prof. Ahmed Hassan",
+    designation: "Associate Professor",
+    role: "Technical Coordinator",
+    phone: "+880-1234-567891",
+    image: "/placeholder.svg?height=200&width=200",
+    tier: "second",
+  },
+  {
+    name: "Dr. Fatima Khan",
+    designation: "Assistant Professor",
+    role: "Event Manager",
+    phone: "+880-1234-567892",
+    image: "/placeholder.svg?height=200&width=200",
+    tier: "second",
+  },
+  {
+    name: "Eng. Rashid Ali",
+    designation: "Lecturer",
+    role: "Logistics Head",
+    phone: "+880-1234-567893",
+    image: "/placeholder.svg?height=200&width=200",
+    tier: "second",
+  },
+  {
+    name: "Md. Karim Rahman",
+    designation: "Assistant Professor",
+    role: "Soccerbot Coordinator",
+    phone: "+880-1234-567894",
+    image: "/placeholder.svg?height=200&width=200",
+    tier: "third",
+  },
+  {
+    name: "Nusrat Jahan",
+    designation: "Lecturer",
+    role: "LFR Coordinator",
+    phone: "+880-1234-567895",
+    image: "/placeholder.svg?height=200&width=200",
+    tier: "third",
+  },
+  {
+    name: "Tanvir Ahmed",
+    designation: "Lecturer",
+    role: "Micromouse Coordinator",
+    phone: "+880-1234-567896",
+    image: "/placeholder.svg?height=200&width=200",
+    tier: "third",
+  },
+]
