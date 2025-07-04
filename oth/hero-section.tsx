@@ -195,17 +195,25 @@ export function HeroSection() {
         <div className="absolute top-8 left-0 right-0 flex justify-between items-start px-8">
           {/* Left: DU and RMEDU Logos */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex items-center space-x-4"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="flex items-center space-x-4"
           >
-            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">DU</span>
-            </div>
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xs">RMEDU</span>
-            </div>
+        <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center overflow-hidden">
+          <img
+            src="/DU_logo.png"
+            alt="DU Logo"
+            className="w-12 h-12 object-contain"
+          />
+        </div>
+        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center overflow-hidden">
+          <img
+            src="/RMEDU_Logo.png"
+            alt="RMEDU Logo"
+            className="w-12 h-12 object-contain"
+          />
+        </div>
           </motion.div>
 
           {/* Right: University Badge */}
@@ -310,7 +318,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
-              <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-4">
+              <h1 className="text-4xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-4">
                 ROBOTRONICS
               </h1>
               <div className="text-4xl md:text-6xl font-bold text-white mb-2">FEST</div>

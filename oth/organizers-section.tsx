@@ -56,7 +56,7 @@ export function OrganizersSection() {
 
         {/* Second Tier */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-center mb-8 text-cyan-400">Core Team</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 text-cyan-400"></h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {organizers
               .filter((org) => org.tier === "second")

@@ -28,7 +28,7 @@ export const segments: Segment[] = [
   {
     id: "project-showcase",
     name: "PROJECT SHOWCASE",
-    color: "from-purple-500 to-violet-600",
+    color: "from-blue-500 to-cyan-600",
     icon: "🚀",
     description: "Innovation and project presentation",
     prizes: { first: "25,000 BDT", second: "15,000 BDT", third: "10,000 BDT" },
@@ -36,7 +36,7 @@ export const segments: Segment[] = [
   {
     id: "datathon",
     name: "DATATHON",
-    color: "from-orange-500 to-red-600",
+    color: "from-red-500 to-pink-600",
     icon: "📊",
     description: "Data science and AI competition",
     prizes: { first: "25,000 BDT", second: "15,000 BDT", third: "10,000 BDT" },

@@ -195,30 +195,38 @@ export function HeroSection() {
         <div className="absolute top-8 left-0 right-0 flex justify-between items-start px-8">
           {/* Left: DU and RMEDU Logos */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex items-center space-x-4"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="flex items-center space-x-4"
           >
-            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">DU</span>
-            </div>
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xs">RMEDU</span>
-            </div>
+        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center overflow-hidden">
+          <img
+            src="/DU_Logo.jpg"
+            alt="DU Logo"
+            className="object-contain w-14 h-14"
+          />
+        </div>
+        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center overflow-hidden">
+          <img
+            src="/RMEDU_Logo.png"
+            alt="RMEDU Logo"
+            className="object-contain w-14 h-14"
+          />
+        </div>
           </motion.div>
 
           {/* Right: University Badge */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-gradient-to-r from-red-500 to-pink-500 px-4 py-2 rounded-lg"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="bg-gradient-to-r from-red-500 to-pink-500 px-4 py-2 rounded-lg"
           >
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
-              <span className="text-sm font-semibold">UNIVERSITY OF DHAKA</span>
-            </div>
+        <div className="flex items-center space-x-2">
+          <MapPin className="w-4 h-4" />
+          <span className="text-sm font-semibold">UNIVERSITY OF DHAKA</span>
+        </div>
           </motion.div>
         </div>
 
@@ -230,26 +238,43 @@ export function HeroSection() {
           className="mb-16 mt-8"
         >
           <div className="inline-flex flex-col items-center space-y-2">
-            <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mb-2">
-              <span className="text-white font-bold text-lg">ICT</span>
+            <div className="w-32 h-32 rounded-full flex items-center justify-center mb-2 overflow-hidden bg-transparent">
+              <img
+          src="/ict_div_logo.png"
+          alt="ICT Division Logo"
+          className="object-contain w-32 h-32"
+          style={{ background: "transparent" }}
+              />
             </div>
-            <span className="text-lg font-semibold text-green-400">DIVISION</span>
+            <span className="text-lg font-semibold text-green-400">ICT DIVISION</span>
             <span className="text-xl font-bold text-white">PRESENTS</span>
           </div>
         </motion.div>
 
-        {/* Event Date Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mb-12"
-        >
-          <Badge className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-8 py-3 text-xl">
-            <Calendar className="w-6 h-6 mr-3" />
-            25-26 JULY 2025
-          </Badge>
-        </motion.div>
+        {/* Right: University Badge + Event Date Badge */}
+        <div className="absolute top-8 right-8 flex flex-col items-end space-y-3 z-30">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-gradient-to-r from-red-500 to-pink-500 px-4 py-2 rounded-lg"
+          >
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-4 h-4" />
+              <span className="text-sm font-semibold">UNIVERSITY OF DHAKA</span>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <Badge className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-8 py-3 text-xl">
+              <Calendar className="w-6 h-6 mr-3" />
+              25-26 JULY 2025
+            </Badge>
+          </motion.div>
+        </div>
 
         {/* Main Logo - Big Square */}
         <motion.div
@@ -270,32 +295,24 @@ export function HeroSection() {
 
               {/* Circuit pattern overlay */}
               <div className="absolute inset-0 opacity-30">
-                <svg className="w-full h-full">
-                  <defs>
-                    <pattern id="circuit" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                      <path d="M0,20 L40,20 M20,0 L20,40" stroke="#06b6d4" strokeWidth="1" opacity="0.3" />
-                      <circle cx="20" cy="20" r="2" fill="#ec4899" />
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#circuit)" />
-                </svg>
+          <svg className="w-full h-full">
+            <defs>
+              <pattern id="circuit" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M0,20 L40,20 M20,0 L20,40" stroke="#06b6d4" strokeWidth="1" opacity="0.3" />
+                <circle cx="20" cy="20" r="2" fill="#ec4899" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#circuit)" />
+          </svg>
               </div>
 
-              {/* Robot icon in center */}
-              <motion.div
-                className="text-8xl z-10"
-                animate={{
-                  rotate: [0, 5, -5, 0],
-                  scale: [1, 1.1, 1],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                }}
-              >
-                🤖
-              </motion.div>
+              {/* Main icon image in center, fully visible, not animated */}
+              <img
+          src="/icon.jpg"
+          alt="Robotronics Icon"
+          className="w-64 h-64 rounded-2xl z-10 object-contain shadow-lg"
+          style={{ objectFit: "contain" }}
+              />
 
               {/* Glowing corners */}
               <div className="absolute top-2 left-2 w-4 h-4 bg-cyan-400 rounded-full animate-pulse" />
@@ -309,13 +326,13 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
+              className="flex flex-col items-center"
             >
-              <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-4">
-                ROBOTRONICS
+              <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-2">
+          ROBOTRONICS FEST
               </h1>
-              <div className="text-4xl md:text-6xl font-bold text-white mb-2">FEST</div>
-              <div className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
-                2025
+              <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
+          2025
               </div>
             </motion.div>
           </div>
@@ -329,41 +346,72 @@ export function HeroSection() {
           className="text-2xl md:text-3xl font-bold"
         >
           <div className="flex flex-wrap justify-center items-center gap-4">
-            {segments.map((segment, index) => (
-              <motion.span
-                key={segment.id}
-                className={`bg-gradient-to-r ${segment.color} bg-clip-text text-transparent relative`}
-                animate={{
-                  scale: [1, 1.05, 1],
-                  textShadow: [
-                    "0 0 0px rgba(255,255,255,0)",
-                    "0 0 20px rgba(255,255,255,0.5)",
-                    "0 0 0px rgba(255,255,255,0)",
-                  ],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Number.POSITIVE_INFINITY,
-                  delay: index * 0.3,
-                }}
-                whileHover={{ scale: 1.1 }}
-              >
-                {segment.name}
-                {index < segments.length - 1 && <span className="text-white mx-2">|</span>}
+            {segments.map((segment, index) => {
+              // Change Datathon color to LFR's color, Project Showing to Soccerbot's color
+              let colorClass = segment.color
+              let underlineColorClass = segment.color
 
-                {/* Glowing underline effect */}
-                <motion.div
-                  className={`absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r ${segment.color}`}
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: [0, 1, 0] }}
-                  transition={{
-                    duration: 3,
-                    repeat: Number.POSITIVE_INFINITY,
-                    delay: index * 0.5,
-                  }}
-                />
-              </motion.span>
-            ))}
+              if (segment.name === "Datathon") {
+          // Find LFR color
+          const lfr = segments.find(s => s.name === "LFR")
+          colorClass = lfr ? lfr.color : segment.color
+          underlineColorClass = colorClass
+              }
+              if (segment.name === "Project Showing") {
+          // Find Soccerbot color
+          const soccerbot = segments.find(s => s.name === "Soccerbot")
+          colorClass = soccerbot ? soccerbot.color : segment.color
+          underlineColorClass = colorClass
+              }
+
+              // Animation and shadow logic
+              const isDimSegment =
+          segment.name === "Project Showing" || segment.name === "Datathon"
+              const textShadowArr = isDimSegment
+          ? [
+              "0 0 0px rgba(255,255,255,0.2)",
+              "0 0 24px rgba(255,255,255,0.7)",
+              "0 0 0px rgba(255,255,255,0.2)",
+            ]
+          : [
+              "0 0 0px rgba(255,255,255,0)",
+              "0 0 20px rgba(255,255,255,0.5)",
+              "0 0 0px rgba(255,255,255,0)",
+            ]
+              const duration = isDimSegment ? 3.5 : 2
+
+              return (
+          <motion.span
+            key={segment.id}
+            className={`bg-gradient-to-r ${colorClass} bg-clip-text text-transparent relative`}
+            animate={{
+              scale: [1, 1.05, 1],
+              textShadow: textShadowArr,
+            }}
+            transition={{
+              duration,
+              repeat: Number.POSITIVE_INFINITY,
+              delay: index * 0.3,
+            }}
+            whileHover={{ scale: 1.1 }}
+          >
+            {segment.name}
+            {index < segments.length - 1 && <span className="text-white mx-2">|</span>}
+
+            {/* Glowing underline effect */}
+            <motion.div
+              className={`absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r ${underlineColorClass}`}
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: [0, 1, 0] }}
+              transition={{
+                duration: duration + 1,
+                repeat: Number.POSITIVE_INFINITY,
+                delay: index * 0.5,
+              }}
+            />
+          </motion.span>
+              )
+            })}
           </div>
         </motion.div>
 
